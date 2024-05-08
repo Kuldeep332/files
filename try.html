@@ -1,0 +1,110 @@
+<!-- <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Employee Table</title>
+    <!-- Add any additional CSS styles if needed -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <style>
+        /* Add CSS styles here */
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table th, .table td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .table th {
+            background-color: #f2f2f2;
+        }
+
+        .employee-image {
+            max-width: 100px; /* Adjust the width as needed */
+            max-height: 100px; /* Adjust the height as needed */
+        }
+    </style>
+<!-- </head>
+<body>
+<table class="table">
+    <caption>Employee Information</caption>
+    <thead>
+        <i class="fas fa-user-md"></i>
+
+    <tr>
+        <th>Employee Image</th>
+        <th>Employee First Name</th>
+        <th>Employee Last Name</th>
+        <th>Employee Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <! Use th:each for iterating over employees -->
+    <!-- <tr th:each="employee : ${employees}">
+        <- Add image URL dynamically for each employee -->
+        <!-- <td><img class="employee-image" th:src="${employee.imageUrl}" alt="Employee Image"></td> -->
+        <!-- <td th:text="${employee.firstName}"></td> -->
+        <!-- <td th:text="${employee.lastName}"></td> -->
+        <!-- <td th:text="${employee.email}"></td> -->
+    <!-- </tr>
+    </tbody>
+</table>
+</body>
+</html>
+<h1 th:text="${doctorName}">DR.NAME</h1>
+<h2 th:text="${doctorSpecialization}">EARSPECi</h2>
+<i class="fas fa-user-md"></i>
+<i class="ri-user-heart-fill"></i> --> --> --> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Invoice as PDF</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <h1>Invoice Generator</h1>
+    <button id="downloadButton">Download Invoice as PDF</button>
+
+    <script>
+        // Function to generate PDF from HTML
+        function generatePDF() {
+            // Retrieve invoice data from backend (replace this with your actual data retrieval process)
+            const invoiceData = {
+                // Sample invoice data
+                customerName: "John Doe",
+                invoiceNumber: "INV-001",
+                // Add more data fields as needed
+            };
+
+            // Populate HTML template with invoice data
+            const invoiceHtml = `
+                <h1>Invoice</h1>
+                <p>Customer Name: ${invoiceData.customerName}</p>
+                <p>Invoice Number: ${invoiceData.invoiceNumber}</p>
+                <!-- Add more HTML for invoice details -->
+            `;
+
+            // Generate PDF using jsPDF
+            const pdf = new jsPDF();
+            pdf.html(invoiceHtml, {
+                callback: function (pdf) {
+                    // Save PDF
+                    pdf.save("invoice.pdf");
+                }
+            });
+        }
+
+        // Event listener for download button
+        document.getElementById("downloadButton").addEventListener("click", generatePDF);
+    </script>
+</body>
+</html>
