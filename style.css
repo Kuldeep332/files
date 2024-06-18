@@ -1,7 +1,4 @@
-@font-face {
-	font-family: att;
-	src: url("./AtHaussStd-Medium.05084bc.ttf");
-}
+
 *{
 	margin: 0;
 	padding: 0;
@@ -10,151 +7,93 @@
 html,body{
 	width: 100%;
 	height: 100%;
-	
 }
-#page1{
-	width: 100%;
-	height: 100vh;
-	background-color:#fbf9f6;
-}
-#nav{
-	display: flex;
-	/* position: fixed; */
-	align-items: center;
-	justify-content: space-between;
-	padding: 0px 40px;
-	/* position: fixed; */
-}
-#nav-part1{
-	display: flex;
-	align-items: center;
-	gap: 170px;
-}
-#nav-part1 h1{
-	font-family: att;
-	text-transform: uppercase;
-	font-size: 2vw;
-}
-#nav-part2{
-	display: flex;
-	flex-direction: column;
-	padding-top: 40px;
-}i{
-	background-color: #000;
+.row{
+	.col-md-4{
+	  margin-bottom:20px;
+	}
+  }
+  .crypto-table {
+	border-collapse: separate;
+	border-spacing: 0 1em;
+	padding: 10px;
+	thead {
+	  th {
+		color:;
+	  }
+	}
+	tbody tr {
+	  background: #fff;
+	  -webkit-box-shadow: 0 1px 15px 1px rgba(62, 57, 107, 0.07);
+	  box-shadow: 0 1px 15px 1px rgba(62, 57, 107, 0.07);
+	  height: 50px;
+  
+	  td > * {
+		vertical-align: middle;
+	  }
+	  td:first-child {
+		-moz-border-radius: 10px 0 0 10px;
+		-webkit-border-radius: 10px 0 0 10px;
+	  }
+	  td:last-child {
+		-moz-border-radius: 0 10px 10px 0;
+		-webkit-border-radius: 0 10px 10px 0;
+	  }
+	  td img {
+		width: 25px;
+		height: 25px;
+	  }
+	}
+  }
+  
+  .card.crypto-gradient-card {
 	color: #fff;
-	text-align: center;
-	position: fixed;
-	padding-top: 10px;
-	right: 4%;
-	width: 40px;
-	height: 40px;
-}
-
-a{
-	text-decoration: none;
-	font-family: att;
-	color: #000;
-	font-weight: 100;
-	
-}
-#page2{
-	width: 100%;
-	/* position: relative; */
-	height: 100vh;
-	background-color: #fcfbf8;
-}
-#mid{
-	text-align: center;
-	margin-top: 100px;
-	position: fixed;
-	margin-left: 120px;
-	
-}
-#mid h1{
-	font-size: 4.3vw;
-	font-family: att;
-	font-weight: 100;
-}
-#mid h1:nth-child(1){
-	/* padding-left: -120px; */
-	margin-left: 14vw;
-	/* color: aqua; */
-}
-#vs svg{
-	width: 50px;
-	position: absolute;
-	display: none;
-	/* margin-top: 30px; */
-	margin-top: -30px;
-	/* display: none; */
-	position: fixed;
-}
-#vs{
-
-	
-}
-video{
-	width: 100%;
-	height: 100%;
-	position: relative;
-	margin-top: -10vw;
-}
- svg{
-	width: 40px;
-}
-#nav1{
-	/* display: flex; */
-}
-#page3{
-	width: 100%;
-	height: 100%;
-	background-color: #fbf9f7;
-}
-#page3 h1{
-	font-size: 4.3vw;
-	font-family: att;
-	text-align: center;
-	font-weight: 100;
-}
-#page2 h1{
-	font-family: att;
-	font-size: 2.5vw;
-	padding-left: 7.1vw;
-	width: 80%;
-	border-left: 20px;
-	/* border-bottom: 1px solid #000; */
-	font-weight: 100;
-
-
-}
-#car{
-	display: flex;
-}
-#fg{
-	margin-left: -53vw;
-	/* background-color: red; */
-	overflow: hidden;
-	margin-top: 5px;
-	height: 40px;
-	font-family: att;
-}
-#fg h2{
-	font-size: 2.35vw;
-	display: none;
-	animation-name: d;
-	animation-iteration-count: infinite;
-	animation-duration: 2s;
-}
-#fg h1{
-	font-size: 2.35vw;
-	margin-left: -60px;
-}
-@keyframes d {
-	0%{
-	top: -100%;
-	}
-	100%{
-		top: 0;
-	}
-	
-}
+	border: 0;
+  }
+  .gradient-1 {
+	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+	background: #eb3349; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+	  to right,
+	  #f45c43,
+	  #eb3349
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+	  to right,
+	  #f45c43,
+	  #eb3349
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  .gradient-2 {
+	-webkit-box-shadow: 0 1px 15px 1px #29ffc6;
+	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+	background: #1cd8d2; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+	  to right,
+	  #93edc7,
+	  #1cd8d2
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+	  to right,
+	  #93edc7,
+	  #1cd8d2
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  .gradient-3 {
+	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+	background: #00d2ff; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+	  to right,
+	  #3a7bd5,
+	  #00d2ff
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+	  to right,
+	  #3a7bd5,
+	  #00d2ff
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  
